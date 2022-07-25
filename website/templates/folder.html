@@ -1,0 +1,25 @@
+{% extends "base.html" %}{% block title %}Folder Notes{% endblock %}
+
+{% block content %}
+
+<h1 align="center">{{ folder.data }}</h1>
+<div style="text-align:center">
+    <a href="/delete_folder/{{ folder.id }}" class="btn btn-outline-danger btn-sm">Delete Folder</a>
+</div>
+<br />
+
+<ul class="list-group list-group-flush" id="notes">
+    {% for note in folder.notes %}
+        <li class="list-group-item">{{ note.data }}
+            <a href="/delete_note_in_folder/{{ note.id }}" class="btn btn-outline-danger btn-sm float-right">Delete</a>
+        </li>
+    {% endfor %}
+</ul>
+<form method="POST">
+    <textarea name="note" id="note" class="form-control"></textarea>
+    <br />
+    <div align="center">
+        <button type="submit" class="btn btn-outline-primary">Add Note</button>
+    </div>
+</form>
+{% endblock %}

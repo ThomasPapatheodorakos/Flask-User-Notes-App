@@ -1,0 +1,23 @@
+{% extends "base.html" %}{% block title %}Home{% endblock %}
+
+{% block content %}
+<h1 align="center">Folders</h1>
+
+<a href="/notes" class="btn btn-outline-secondary btn-block">Notes</a>
+<br />
+
+{% for folder in user.folders %}
+<a href="/folder/{{ folder.id }}" class="btn btn-outline-secondary btn-block">{{ folder.data }}</a>
+{% endfor %}
+
+<br />
+
+<form method="POST">
+    <textarea name="folder" id="folder" class="form-control"></textarea>
+    <br />
+    <div align="center">
+        <button type="submit" class="btn btn-outline-primary">Add Folder</button>
+    </div>
+</form>
+
+{% endblock %}

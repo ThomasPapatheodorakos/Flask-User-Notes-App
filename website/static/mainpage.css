@@ -1,0 +1,44 @@
+
+/* Margins of entire website? */
+body {
+    margin: 0.625em;
+}   
+
+/* We use this id in the navbar */
+#rcorners1 {
+    border-radius: 1.875em;
+    padding: 0.3125em; 
+    margin-top:  1em;
+}
+
+/* class that declared custom navbar */
+.navbar-custom {
+    background-color: rgb(52, 117, 181);
+}
+
+/* Removes border around expanding navbar-toggler button */
+.navbar-toggler,
+.navbar-toggler:focus,
+.navbar-toggler:active,
+.navbar-toggler-icon:focus {
+    outline: none;
+    border: none;
+    box-shadow: none;
+}
+
+/* To make the items in collapsed menu centered */
+.navbar .navbar-collapse {
+    text-align: center;
+}
+
+/* Spacing between navbar items */
+.nav-item {
+    margin-left : 0.625em;
+    margin-right : 0.625em;  
+}
+
+/* Adding padding/margin to div class used in the 'block content' so that it is seperated from navbar*/
+.container {
+    /* padding-top: 10px; */
+    margin-top: 1em;
+}
