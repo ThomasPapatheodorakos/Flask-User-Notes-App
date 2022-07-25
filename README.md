@@ -1,5 +1,5 @@
 # Flask-User-Notes-App
-A notes web app using Flask and SQLAlchemy.
+A notes web app using Python with Flask and SQLAlchemy.
 
 ## Features
 * Sign-Up/Login authentication.
